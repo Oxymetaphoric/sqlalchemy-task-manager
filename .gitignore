@@ -135,7 +135,7 @@ lib/
 add Spyder project settings
 .spyderproject
 .spyproject
-
+env.py
 # Rope project settings
 .ropeproject
 
