@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Task Manager</title>
-     <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <!-- <link href="css/style.css" rel="stylesheet"> --> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Compiled and minified CSS materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
   </head>
   <body>
-Hello World!  
-  </body>
+    <header>
+      <nav class="light-blue darken-1">
+        <div class="nav-wrapper">
+          <a href="{{url_for('home')}}" class="brand-logo">Task Manager</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('home')}}">New Task</a></li>
+            <li><a href="{{url_for('home')}}">Categories</a></li>
+          </ul>
+        </div>
+      </nav>
+      <ul class="sidenav", id="mobile-demo">
+        <li><a href="{{url_for('home')}}">Home</a></li>      
+        <li><a href="{{url_for('home')}}">Home</a></li>
+        <li><a href="{{url_for('home')}}">Home</a></li>
+      </ul>
+  </header>
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+   <!-- materialize JavaScript  -->
 </html>
